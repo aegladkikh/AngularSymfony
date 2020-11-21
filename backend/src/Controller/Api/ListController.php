@@ -19,8 +19,14 @@ class ListController extends AbstractController
     public function getList(): JsonResponse
     {
         $list = [
-            "eat" => "Суп",
-            "wash" => "Сразу",
+            [
+                "title" => "Суп",
+                "text" => "Сразу",
+            ],
+            [
+                "title" => "Картошку",
+                "text" => "Потом",
+            ]
         ];
 
         return $this->json($list, 200);

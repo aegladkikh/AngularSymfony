@@ -9,7 +9,7 @@ import {ListService} from "./list.service";
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  list: List[] | undefined;
+  lists: List[] | undefined;
 
   constructor(private listService: ListService) {}
 
@@ -19,6 +19,6 @@ export class ListComponent implements OnInit {
 
   getList(): void {
     this.listService.getList()
-      .subscribe(list => (this.list = list));
+      .subscribe(list => (this.lists = list));
   }
 }

@@ -3,7 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import {catchError, tap} from 'rxjs/operators';
 
 import {List} from "./list";
 import { HttpErrorHandler, HandleError } from '../http-error-handler.service';
@@ -30,6 +30,7 @@ export class ListService {
   getList(): Observable<List[]> {
     return this.http.get<List[]>(this.listUrl)
       .pipe(
+        tap(_ => console.debug('123')),
         catchError(this.handleError('getList', []))
       );
   }
