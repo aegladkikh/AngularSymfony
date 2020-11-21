@@ -17,8 +17,7 @@ services:
     networks:
       - main
   frontend:
-    image: node:lts-alpine
-    restart: always
+    build: ./docker/node
     volumes:
       - ./frontend:/app
       - app/node_modules
