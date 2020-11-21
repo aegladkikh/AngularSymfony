@@ -1,0 +1,46 @@
+version: '3'
+services:
+  php:
+    build: ./docker/php
+    volumes:
+      - ./backend/:/app
+    working_dir: /app
+    networks:
+      - main
+  backend:
+    image: nginx:alpine
+    volumes:
+      - ./backend/public:/app/public
+      - ./docker/nginx/conf.d/backend.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 8080:80
+    networks:
+      - main
+  frontend:
+    image: node:lts-alpine
+    volumes:
+      - ./frontend:/app
+    working_dir: /app
+    command: ["npm", "run", "start"]
+    ports:
+      - 80:4200
+    networks:
+      - main
+  postgres:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: test1
+    volumes:
+      - backdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    working_dir: /data/postgresql
+    networks:
+      - main
+
+networks:
+  main:
+
+volumes:
+  backdata:
