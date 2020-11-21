@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -15,8 +15,8 @@ class MainController extends AbstractController
     /**
      * @Route("/", name="app.index")
      */
-    public function index(): Response
+    public function index(): JsonResponse
     {
-        return new Response('hello');
+        return $this->json(['hello'], 200);
     }
 }
