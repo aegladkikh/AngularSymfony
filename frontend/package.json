@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --poll 500",
+    "frontend": "ng serve --port 80",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",

@@ -16,18 +16,18 @@ services:
       - 8080:80
     networks:
       - main
-  frontend:
-    build: ./docker/node
-    volumes:
-      - ./frontend:/app
-#      - app/node_modules
-    environment:
-      - NODE_ENV=development
-    working_dir: /app
-    ports:
-      - 80:4200
-    networks:
-      - main
+#  frontend:
+#    build: ./docker/node
+#    volumes:
+#      - ./frontend:/app
+##      - app/node_modules
+#    environment:
+#      - NODE_ENV=development
+#    working_dir: /app
+#    ports:
+#      - 80:4200
+#    networks:
+#      - main
   postgres:
     image: postgres:alpine
     restart: always
