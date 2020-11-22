@@ -9,7 +9,7 @@ import {ListService} from "./list.service";
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  lists: List[] | undefined;
+  public lists: List[] = [];
 
   constructor(private listService: ListService) {}
 

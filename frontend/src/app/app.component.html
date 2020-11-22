@@ -1,11 +1,17 @@
-<nav>
-  <div>App</div>
+<div class="container">
+  <nav>
+    <ul>
+      <li><a class="button" routerLink="/" routerLinkActive="activebutton">main</a></li>
+      <li><a class="button" routerLink="/list">list</a></li>
+      <li><a class="button" routerLink="/about">about</a></li>
+    </ul>
+  </nav>
 
-  <ul>
-    <li><a class="button" routerLink="/" routerLinkActive="activebutton">main</a></li>
-    <li><a class="button" routerLink="/list">list</a></li>
-    <li><a class="button" routerLink="/about">about</a></li>
-  </ul>
-</nav>
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
 
-<router-outlet></router-outlet>
+  <footer>
+    footer
+  </footer>
+</div>

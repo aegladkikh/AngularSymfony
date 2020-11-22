@@ -1,7 +1,14 @@
-<h1>Lists</h1>
-<ul>
-  <li *ngFor="let list of lists">
-    <b>{{list.title}}</b> -
-    <i>{{list.text}}</i>
-  </li>
-</ul>
+<div class="card highlight-card card-small">
+  Lists work
+</div>
+<div class="card-container">
+  <ul *ngIf="lists.length; else noLists">
+    <li *ngFor="let list of lists" class="card">
+      <b>{{list.title}}</b> -
+      <i>{{list.text}}</i>
+    </li>
+  </ul>
+</div>
+<ng-template #noLists>
+  <p class="text-center">No lists yet...</p>
+</ng-template>
