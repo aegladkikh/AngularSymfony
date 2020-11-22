@@ -1,17 +1,32 @@
-<div class="container">
-  <nav>
-    <ul>
-      <li><a class="button" routerLink="/" routerLinkActive="activebutton">main</a></li>
-      <li><a class="button" routerLink="/list">list</a></li>
-      <li><a class="button" routerLink="/about">about</a></li>
-    </ul>
-  </nav>
+<nav>
+  <div class="grid-container">
+    <div class="grid-x align-middle ">
+      <div class="cell shrink">
+        <ul class="menu">
+          <li><a routerLink="/" routerLinkActive="activebutton">Главная</a></li>
+          <li><a routerLink="/list">Список</a></li>
+          <li><a routerLink="/about">О компании</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
 
-  <main class="content">
+<main>
+  <div class="grid-container">
     <router-outlet></router-outlet>
-  </main>
+  </div>
+</main>
 
-  <footer>
-    footer
-  </footer>
-</div>
+<footer>
+  <div class="grid-container">
+    <div class="grid-x align-justify align-middle grid-margin-x">
+      <div class="cell shrink">
+        <span>Гладких Анатолийl</span>
+      </div>
+      <div class="cell auto text-center">
+        <span>Тестовое приложение. Symfony+Angular</span>
+      </div>
+    </div>
+  </div>
+</footer>

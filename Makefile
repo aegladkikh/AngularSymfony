@@ -12,5 +12,5 @@ comi:
 	docker-compose run --rm php composer install
 comu:
 	docker-compose run --rm php composer update
-frontend:
+front:
 	cd frontend && npm run frontend
