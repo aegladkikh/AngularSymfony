@@ -1,14 +1,21 @@
-<div class="card highlight-card card-small">
-  Lists work
-</div>
-<div class="card-container">
-  <ul *ngIf="lists.length; else noLists">
-    <li *ngFor="let list of lists" class="card">
-      <b>{{list.title}}</b> -
-      <i>{{list.text}}</i>
-    </li>
-  </ul>
-</div>
-<ng-template #noLists>
-  <p class="text-center">load...</p>
-</ng-template>
+<section>
+  <h1 class="text-center">Lists work</h1>
+
+  <div class="grid-x align-middle ">
+    <div class="cell auto">
+      <ul *ngIf="lists.length; else noLists">
+        <li *ngFor="let list of lists" class="card">
+          <div class="card-divider">
+            <b>{{list.title}}</b>
+          </div>
+          <div class="card-section">
+            <i>{{list.text}}</i>
+          </div>
+        </li>
+      </ul>
+      <ng-template #noLists>
+        <p class="text-center">load...</p>
+      </ng-template>
+    </div>
+  </div>
+</section>

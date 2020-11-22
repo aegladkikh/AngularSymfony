@@ -25,7 +25,7 @@ class ListController extends AbstractController
             ],
             [
                 "title" => "Картошку",
-                "text" => "Потом",
+                "text" => "После",
             ]
         ];
 

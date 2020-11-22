@@ -52,3 +52,17 @@
 // @include foundation-float-classes;
 @include foundation-flex-classes;
 @include foundation-visibility-classes;
+
+html,
+body, .root {
+  height: 100vh;
+}
+
+body, .root {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  padding: 1rem 0
+}
